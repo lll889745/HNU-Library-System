@@ -84,5 +84,5 @@ public:
 	
 	void HelpSystem();			//帮助系统 
 	
-
+	void ShowRecord();			//管理员查看所有借阅记录
 };
