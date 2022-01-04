@@ -5,84 +5,84 @@
 #include"Help.h"
 class Library{
 public:
-    Library();							//ÎŞ²Î¹¹Ôì£¬´ÓÎÄ¼şÖĞ¶ÁÈ¡books¡¢users¡¢records 
+    Library();						//æ— å‚æ„é€ ï¼Œä»æ–‡ä»¶ä¸­è¯»å–booksã€usersã€records 
     
-    ~Library();							//Îö¹¹£¬½â¾ö¶ÑÇøµÄÊı×é 
+    ~Library();						//ææ„ï¼Œè§£å†³å †åŒºçš„æ•°ç»„ 
 	
-    Book* books;						//BookÊı×é
+    Book* books;					//Bookæ•°ç»„
     
-    //¹ÜÀíÔ±ÓëÆÕÍ¨ÓÃ»§Í³Ò»£¬ÒÔ±àºÅÇø·Ö 
-    User* users;						//userÖ¸ÕëÊı×é 
+    //ç®¡ç†å‘˜ä¸æ™®é€šç”¨æˆ·ç»Ÿä¸€ï¼Œä»¥ç¼–å·åŒºåˆ† 
+    User* users;					//useræŒ‡é’ˆæ•°ç»„ 
     
-    Record* records;					//´æ´¢½èÔÄ¼ÇÂ¼Êı¾İ 
+    Record* records;					//å­˜å‚¨å€Ÿé˜…è®°å½•æ•°æ® 
     
-    Help help;							//HelpÎª³ÉÔ± 
+    Help help;						//Helpä¸ºæˆå‘˜ 
     
-    int m_sum;							//Êé¼®×ÜÁ¿
+    int m_sum;						//ä¹¦ç±æ€»é‡
     
-    int m_user_sum;						//userµÄ×ÜÁ¿ 
+    int m_user_sum;					//userçš„æ€»é‡ 
     
-    int m_record_sum;					//recordµÄ×ÜÁ¿ 
+    int m_record_sum;					//recordçš„æ€»é‡ 
     
-    void get_BookNum();					//»ñÈ¡Êé¼®×ÜÁ¿
+    void get_BookNum();					//è·å–ä¹¦ç±æ€»é‡
 	
-	void get_UserNum();					//´ÓÎÄ¼ş×ÜµÃµ½UserµÄÊıÁ¿ 
+	void get_UserNum();				//ä»æ–‡ä»¶æ€»å¾—åˆ°Userçš„æ•°é‡ 
 	
-	void get_RecordNum();				//´ÓÎÄ¼şÖĞµÃµ½recordµÄÊıÁ¿ 
+	void get_RecordNum();				//ä»æ–‡ä»¶ä¸­å¾—åˆ°recordçš„æ•°é‡ 
     
-    void ShowMenue();					//Ö÷²Ëµ¥Õ¹Ê¾
+    void ShowMenue();					//ä¸»èœå•å±•ç¤º
     
-    void ShowAdministratorMenue();		//¹ÜÀíÔ±²Ëµ¥Õ¹Ê¾
+    void ShowAdministratorMenue();			//ç®¡ç†å‘˜èœå•å±•ç¤º
 	
-	void ShowCommonMenue();				//ÆÕÍ¨ÓÃ»§²Ëµ¥Õ¹Ê¾ 
+	void ShowCommonMenue();				//æ™®é€šç”¨æˆ·èœå•å±•ç¤º 
     
-    void ExitSystem();					//ÍË³öÏµÍ³ 
+    void ExitSystem();					//é€€å‡ºç³»ç»Ÿ 
     
-    void SortBookByName(string str);	//°´ÊéÃû²éÕÒ
+    void SortBookByName(string str);	//æŒ‰ä¹¦åæŸ¥æ‰¾
     
-    void SortBookByIsbn(string str);	//°´isbn
+    void SortBookByIsbn(string str);	//æŒ‰isbn
     
-    void SortBookByCode(string str,int choice);//°´·ÖÀàºÅ ,choiceÎª·ÖÀàµÈ¼¶ 
+    void SortBookByCode(string str);	//æŒ‰åˆ†ç±»å· 
     
-    void SortBookByAuthor(string str);	//°´×÷Õß
+    void SortBookByAuthor(string str);	//æŒ‰ä½œè€…
     
-    void SortBook();					//ËÑË÷Í¼Êé×Üº¯Êı£¬°üº¬ÉÏÃæËÄÖÖ 
+    void SortBook();						//æœç´¢å›¾ä¹¦æ€»å‡½æ•°ï¼ŒåŒ…å«ä¸Šé¢å››ç§ 
 	
-	void BuidUser();					//´ÓÎÄ¼şÖĞµÄÊı¾İ½øĞĞ´´½¨ÓÃ»§ 
+	void BuidUser();					//ä»æ–‡ä»¶ä¸­çš„æ•°æ®è¿›è¡Œåˆ›å»ºç”¨æˆ· 
 	
-	void SaveUser();					//ĞŞ¸Ä»òÔö¼ÓUserºó£¬½«Êı¾İ±£´æµ½ÎÄ¼şÖĞ
+	void SaveUser();					//ä¿®æ”¹æˆ–å¢åŠ Useråï¼Œå°†æ•°æ®ä¿å­˜åˆ°æ–‡ä»¶ä¸­
 	
-	void SaveBook();					//ĞŞ¸Ä»òÔö¼Óbookºó£¬½«Êı¾İ±£´æµ½ÎÄ¼şÖĞ 
+	void SaveBook();					//ä¿®æ”¹æˆ–å¢åŠ bookåï¼Œå°†æ•°æ®ä¿å­˜åˆ°æ–‡ä»¶ä¸­ 
 	
-	void SaveRecord();					//½«record±£´æµ½ÎÄ¼şÖĞ 
+	void SaveRecord();					//å°†recordä¿å­˜åˆ°æ–‡ä»¶ä¸­ 
 	
-	void AddBooks();					//Ôö¼Óbook
+	void AddBooks();					//å¢åŠ book
 	
-	void AddUsers();					//Ôö¼Óuser
+	void AddUsers();					//å¢åŠ user
 	
-	void DeleteUsers();					//É¾³ıuser
+	void DeleteUsers();					//åˆ é™¤user
 	
-	void DeleteBooks();					//É¾³ıbook 
+	void DeleteBooks();					//åˆ é™¤book 
 	
-	void ChangeBookInformation();		//ĞŞ¸ÄÍ¼ÊéµÄĞÅÏ¢
+	void ChangeBookInformation();				//ä¿®æ”¹å›¾ä¹¦çš„ä¿¡æ¯
 	
-	bool Login(int account,int password,int code);//ÅĞ¶ÏÕËºÅÃÜÂëÊäÈëÊÇ·ñÕıÈ·
+	bool Login(int account,int password,int code);		//åˆ¤æ–­è´¦å·å¯†ç è¾“å…¥æ˜¯å¦æ­£ç¡®
 	
-	void ChangePassword(int);			//ĞŞ¸ÄÃÜÂë 
+	void ChangePassword(int);				//ä¿®æ”¹å¯†ç  
 	
-	void ResetPassword();				//»Ö¸´Ä¬ÈÏÃÜÂë 
+	void ResetPassword();					//æ¢å¤é»˜è®¤å¯†ç  
 	
-	void LookBorrowBooks(int account);	//²é¿´account½èÔÄµÄÊé¼® 
+	void LookBorrowBooks(int account);	//æŸ¥çœ‹accountå€Ÿé˜…çš„ä¹¦ç± 
 	
-	void BorrowBooks(int account);		//ÕË»§account½èÔÄÊé¼® 
+	void BorrowBooks(int account);		//è´¦æˆ·accountå€Ÿé˜…ä¹¦ç± 
 	
-	void ReturnBook(int account);		//ÕË»§account¹é»¹Í¼Êé 
+	void ReturnBook(int account);		//è´¦æˆ·accountå½’è¿˜å›¾ä¹¦ 
 	 
-	void Administrator();				//¹ÜÀíÔ± 
+	void Administrator();			//ç®¡ç†å‘˜ 
 	
-	void CommonUser();					//ÆÕÍ¨ÓÃ»§
+	void CommonUser();			//æ™®é€šç”¨æˆ·
 	
-	void HelpSystem();					//°ïÖúÏµÍ³ 
+	void HelpSystem();			//å¸®åŠ©ç³»ç»Ÿ 
 	
 
 };
