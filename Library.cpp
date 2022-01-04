@@ -122,6 +122,7 @@ void Library::ShowAdministratorMenue()//展示管理员菜单
 	cout << "\t\t\t|                6.删除图书                 ｜\n";
 	cout << "\t\t\t|                7.重置用户                 ｜\n";
 	cout << "\t\t\t|                8.修改图书                 ｜\n";
+	cout << "\t\t\t|                9.借阅记录                 ｜\n";
 	cout << "\t\t\t|                0.退出                     ｜\n";
 	cout << "\t\t\t==============================================\n";
 	cout << "请选择功能：\n";
@@ -880,6 +881,9 @@ void Library::Administrator()//管理员函数
 				case 8:	  //修改图书信息 
 					this->ChangeBookInformation();
 					break; 
+				case 9:	  //查看所有借阅记录
+					this->ShowRecord();
+					break;
 				case 0:   //退出系统 
 					this->ExitSystem(); 
 					break;
@@ -936,3 +940,17 @@ void Library::CommonUser()//普通用户函数
 	}
 	else ;
 } 
+
+void Library::ShowRecord() {
+	int mark = 0;
+	cout << "目前被借阅的图书有：" << endl;
+	for (int i = 0; i < m_record_sum; i++) {
+		mark += 1;
+		cout << records[i].get_Name() << " 现在正在被 "<<records[i].get_Account()<<" 借阅"<<endl;
+	}
+	if (mark == 0) {
+		cout << "无借阅记录！" << endl;
+	}
+	system("pause");
+	return ;
+}
